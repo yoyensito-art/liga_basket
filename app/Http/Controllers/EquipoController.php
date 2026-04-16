@@ -18,13 +18,19 @@ class EquipoController extends Controller
         return view('equipos.create');
     }
 
-   public function store(Request $request)
+  public function store(Request $request)
 {
     $request->validate([
-        'nombre' => 'required'
+        'nombre' => 'required',
+        'ciudad' => 'required',
+        'entrenador' => 'required'
     ]);
 
-    Equipo::create($request->all());
+    Equipo::create([
+        'nombre' => $request->nombre,
+        'ciudad' => $request->ciudad,
+        'entrenador' => $request->entrenador,
+    ]);
 
     return redirect()->route('equipos.index')
         ->with('success', 'Equipo creado correctamente');

@@ -12,6 +12,12 @@ Route::get('/dashboard', function () {
     return view('dashboard');
 })->middleware(['auth', 'verified'])->name('dashboard');
 
+use App\Http\Controllers\UserController;
+
+Route::get('/users', [UserController::class, 'index'])
+    ->middleware(['auth'])
+    ->name('users.index');
+
 /* 👇 AQUÍ ESTÁ LO IMPORTANTE */
 Route::resource('equipos', EquipoController::class);
 

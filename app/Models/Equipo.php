@@ -8,8 +8,9 @@ class Equipo extends Model
 {
     protected $table = 'equipos';
 
-    protected $fillable = [
-        'nombre',
-        'ciudad'
-    ];
+   protected $fillable = [
+    'nombre',
+    'ciudad',
+    'entrenador'
+];
 }
