@@ -7,78 +7,41 @@ use Illuminate\Http\Request;
 
 class EquipoController extends Controller
 {
-    /**
-     * Mostrar lista de equipos
-     */
     public function index()
     {
         $equipos = Equipo::all();
         return view('equipos.index', compact('equipos'));
     }
 
-    /**
-     * Mostrar formulario de creación
-     */
     public function create()
     {
         return view('equipos.create');
     }
 
-    /**
-     * Guardar nuevo equipo
-     */
-    public function store(Request $request)
-    {
-        $request->validate([
-            'nombre' => 'required',
-            'ciudad' => 'required'
-        ]);
+   public function store(Request $request)
+{
+    $request->validate([
+        'nombre' => 'required'
+    ]);
 
-        Equipo::create([
-            'nombre' => $request->nombre,
-            'ciudad' => $request->ciudad
-        ]);
+    Equipo::create($request->all());
 
-        return redirect()->route('equipos.index');
-    }
+    return redirect()->route('equipos.index')
+        ->with('success', 'Equipo creado correctamente');
+}
 
-    /**
-     * Mostrar un equipo (opcional)
-     */
-    public function show(Equipo $equipo)
-    {
-        return view('equipos.show', compact('equipo'));
-    }
-
-    /**
-     * Mostrar formulario de edición
-     */
     public function edit(Equipo $equipo)
     {
         return view('equipos.edit', compact('equipo'));
     }
 
-    /**
-     * Actualizar equipo
-     */
     public function update(Request $request, Equipo $equipo)
     {
-        $request->validate([
-            'nombre' => 'required',
-            'ciudad' => 'required'
-        ]);
-
-        $equipo->update([
-            'nombre' => $request->nombre,
-            'ciudad' => $request->ciudad
-        ]);
+        $equipo->update($request->all());
 
         return redirect()->route('equipos.index');
     }
 
-    /**
-     * Eliminar equipo
-     */
     public function destroy(Equipo $equipo)
     {
         $equipo->delete();
