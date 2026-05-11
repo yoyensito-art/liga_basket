@@ -5,24 +5,24 @@
 
            <div class="flex justify-between items-center mb-8">
 
-    <!-- Botón volver -->
-    <a href="{{ route('dashboard') }}"
-       class="bg-gray-600 hover:bg-gray-700 text-white px-4 py-2 rounded-lg shadow transition">
-        ⬅ Volver al menú
-    </a>
+                    <!-- Botón volver -->
+                    <a href="{{ route('dashboard') }}"
+                    class="bg-gray-600 hover:bg-gray-700 text-white px-4 py-2 rounded-lg shadow transition">
+                        ⬅ Volver al menú
+                    </a>
 
-    <!-- Título -->
-    <h1 class="text-4xl font-bold text-gray-800">
-        🏀 Gestión de Equipos
-    </h1>
+                    <!-- Título -->
+                    <h1 class="text-4xl font-bold text-gray-800">
+                        🏀 Gestión de Equipos
+                    </h1>
 
-    <!-- Botón crear -->
-    <a href="{{ route('equipos.create') }}"
-       class="bg-orange-500 hover:bg-orange-600 text-white px-5 py-2 rounded-lg shadow-lg transition">
-        + Nuevo Equipo
-    </a>
+                    <!-- Botón crear -->
+                    <a href="{{ route('equipos.create') }}"
+                    class="bg-orange-500 hover:bg-orange-600 text-white px-5 py-2 rounded-lg shadow-lg transition">
+                        + Nuevo Equipo
+                    </a>
 
-</div>
+                </div>
             <!-- Mensaje vacío -->
             @if($equipos->isEmpty())
                 <div class="text-center text-gray-500 mt-20">

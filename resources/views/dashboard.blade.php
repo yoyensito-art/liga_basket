@@ -26,21 +26,27 @@
                 </a>
 
                 <!-- Jugadores -->
-                <a href="#"
-                   class="bg-green-500 text-white p-6 rounded-2xl shadow-lg hover:scale-105 transition">
-                    <h2 class="text-xl font-bold">🧍 Jugadores</h2>
-                    <p>Gestión de jugadores por equipo</p>
-                </a>
+                    <a href="{{ route('jugadores.index') }}"
+                    class="bg-green-500 text-white p-6 rounded-2xl shadow-lg hover:scale-105 transition">
 
-                <!-- Partidos -->
-                <a href="#"
-                   class="bg-purple-500 text-white p-6 rounded-2xl shadow-lg hover:scale-105 transition">
-                    <h2 class="text-xl font-bold">🏆 Partidos</h2>
-                    <p>Registro de encuentros</p>
+                        <h2 class="text-xl font-bold">🧍 Jugadores</h2>
+
+                        <p>Gestión de jugadores por equipo</p>
+
+                    </a>
+
+                <!-- PARTIDOS -->
+                <a href="{{ route('partidos.index') }}"
+                class="bg-purple-600 hover:bg-purple-700 text-white p-6 rounded-2xl shadow-lg hover:scale-105 transition">
+
+                    <h2 class="text-xl font-bold">🏀 Partidos</h2>
+
+                    <p>Registro y control de partidos</p>
+
                 </a>
 
                 <!-- Resultados -->
-                <a href="#"
+                <a href="{{ route('estadisticas.index') }}"
                    class="bg-red-500 text-white p-6 rounded-2xl shadow-lg hover:scale-105 transition">
                     <h2 class="text-xl font-bold">📊 Resultados</h2>
                     <p>Estadísticas y análisis</p>

@@ -5,21 +5,21 @@
 
             <div class="flex justify-between items-center mb-8">
 
-    <!-- Botón volver -->
-    <a href="{{ route('dashboard') }}"
-       class="bg-gray-600 hover:bg-gray-700 text-white px-4 py-2 rounded-lg shadow transition">
-        ⬅ Volver al menú
-    </a>
+                    <!-- Botón volver -->
+                    <a href="{{ route('dashboard') }}"
+                    class="bg-gray-600 hover:bg-gray-700 text-white px-4 py-2 rounded-lg shadow transition">
+                        ⬅ Volver al menú
+                    </a>
 
-    <!-- Título -->
-    <h1 class="text-4xl font-bold text-gray-800">
-        👥 Gestión de Usuarios
-    </h1>
+                    <!-- Título -->
+                    <h1 class="text-4xl font-bold text-gray-800">
+                        👥 Gestión de Usuarios
+                    </h1>
 
-    <!-- Espacio vacío o botón opcional -->
-    <div></div>
+                    <!-- Espacio vacío o botón opcional -->
+                    <div></div>
 
-</div>
+                </div>
             <div class="bg-white rounded-xl shadow-lg overflow-hidden">
 
                 <table class="w-full text-left">
